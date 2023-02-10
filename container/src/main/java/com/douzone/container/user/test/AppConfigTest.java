@@ -8,6 +8,7 @@ import com.douzone.container.user.Friend;
 import com.douzone.container.user.User;
 
 public class AppConfigTest {
+
 	public static void main(String[] args) {
 		testAppConfig();
 	}
@@ -21,4 +22,5 @@ public class AppConfigTest {
 		Friend friend = ac.getBean(Friend.class);
 		System.out.println(friend);
 	}
+
 }

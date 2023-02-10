@@ -8,14 +8,13 @@ import org.springframework.stereotype.Component;
 public class User {
 	private Long no = 0L;
 	private String name = "둘리";
-
+	
 	private Friend friend;
 	private List<String> friends;
-
+	
 	public User() {
-
 	}
-
+	
 	public User(String name) {
 		this.name = name;
 	}
@@ -24,7 +23,7 @@ public class User {
 		this.no = no;
 		this.name = name;
 	}
-
+	
 	public Long getNo() {
 		return no;
 	}
@@ -40,7 +39,7 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
 	public Friend getFriend() {
 		return friend;
 	}
@@ -48,7 +47,7 @@ public class User {
 	public void setFriend(Friend friend) {
 		this.friend = friend;
 	}
-
+	
 	public List<String> getFriends() {
 		return friends;
 	}

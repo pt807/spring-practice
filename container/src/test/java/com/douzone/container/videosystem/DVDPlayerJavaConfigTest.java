@@ -1,4 +1,4 @@
-package com.douzone.container.soundsystem;
+package com.douzone.container.videosystem;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -9,21 +9,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(locations={"classpath:com/douzone/container/config/soundsystem/applicationContext.xml"})
-public class CDPlayerXmlConfigTest {
+import com.douzone.container.config.videosystem.DVDPlayerConfig;
 
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(classes = { DVDPlayerConfig.class })
+public class DVDPlayerJavaConfigTest {
 	@Autowired
-	private CDPlayer cdPlayer;
+	private DVDPlayer dvdPlayer;
 	
 	@Test
-	public void testCDPlayerNotNull() {
-		assertNotNull(cdPlayer);
+	public void testDVDPlayerNotNull() {
+		assertNotNull(dvdPlayer);
 	}
 	
 	@Test
 	public void testPlay() {
-		assertEquals("Playing 붕붕 by 김하온", cdPlayer.play());
+		assertEquals("Playing Movie MARVEL's Avengers", dvdPlayer.play());
 	}
-
 }
