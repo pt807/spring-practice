@@ -9,12 +9,12 @@ import com.douzone.container.videosystem.DigitalVideoDisc;
 
 @Configuration
 public class DVDPlayerConfig {
-
+	
 	@Bean
 	public DigitalVideoDisc avengers() {
 		return new Avengers();
 	}
-
+	
 	// 주입(Injection)하기1
 	// Bean 생성 메소드를 직접 호출하는 방법
 	// 생성자 주입
@@ -31,7 +31,7 @@ public class DVDPlayerConfig {
 		return new DVDPlayer(dvd);
 	}
 
-	// 주입(Injection)하기3
+	// 주입(Injection)하기2
 	// Parameter로 bean을 전달하는 방법
 	// setter 주입
 	@Bean

@@ -11,4 +11,5 @@ public class CDPlayer {
 	public String play() {
 		return cd.play();
 	}
+
 }

@@ -13,42 +13,41 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import com.douzone.container.config.videosystem.DVDPlayerConfig;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DVDPlayerConfig.class })
+@ContextConfiguration(classes={DVDPlayerConfig.class})
 public class DVDPlayerJavaConfigTest {
-	
 	@Autowired
 	// 같은 타입의 빈이 2개 이상 있는 경우
 	// 설정 클래스의 빈생성 메소드의 @Bean의 name(default) 속성을 사용하기
 	@Qualifier("dvdPlayer")
 	private DVDPlayer dvdPlayer01;
-	
+
 	@Autowired
 	// 같은 타입의 빈이 2개 이상 있는 경우
 	// 설정 클래스의 빈생성 메소드의 이름으로 Qualifier 하기
 	@Qualifier("dvdPlayer02")
 	private DVDPlayer dvdPlayer02;
-	
+
 	@Autowired
 	@Qualifier("dvdPlayer03")
 	private DVDPlayer dvdPlayer03;
-	
+
 	@Test
 	public void testDVDPlayer01NotNull() {
 		assertNotNull(dvdPlayer01);
 	}
-	
+
 	@Test
 	public void testDVDPlayer02NotNull() {
 		assertNotNull(dvdPlayer02);
 	}
-	
+
 	@Test
 	public void testDVDPlayer03NotNull() {
 		assertNotNull(dvdPlayer03);
 	}
-	
+
 	@Test
 	public void testPlay() {
-		assertEquals("Playing Movie MARVEL's Avengers", dvdPlayer02.play());
+		assertEquals("Playing Movie MARVEL's Avengers", dvdPlayer03.play());
 	}
 }

@@ -12,12 +12,11 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import com.douzone.container.config.soundsystem.CDPlayerConfig;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { CDPlayerConfig.class })
-
+@ContextConfiguration(classes={CDPlayerConfig.class})
 public class CDPlayerJavaConfigTest {
 	@Autowired
 	private CDPlayer cdPlayer;
-
+	
 	@Test
 	public void testCDPlayerNotNull() {
 		assertNotNull(cdPlayer);
