@@ -36,7 +36,7 @@ public class DVDPlayerXmlConfigTest {
 	@Autowired
 	@Qualifier("avengerAgeofUltron")
 	DigitalVideoDisc dvd5;
-
+	
 	@Autowired
 	@Qualifier("avengerCaptainAmerica")
 	DigitalVideoDisc dvd6;
@@ -151,17 +151,17 @@ public class DVDPlayerXmlConfigTest {
 
 	@Test
 	public void testPlay3() {
-		assertEquals("Playing Movie MARVEL's Iron Man", dvdPlayer2.play());
+		assertEquals("Playing Movie MARVEL's Iron Man", dvdPlayer3.play());
 	}
 
 	@Test
 	public void testPlay4() {
-		assertEquals("Playing Movie MARVEL's Iron Man", dvdPlayer2.play());
+		assertEquals("Playing Movie MARVEL's Iron Man", dvdPlayer4.play());
 	}
 
 	@Test
 	public void testPlay5() {
-		assertEquals("Playing Movie MARVEL's Iron Man", dvdPlayer2.play());
+		assertEquals("Playing Movie MARVEL's Iron Man", dvdPlayer5.play());
 	}
 
 }
